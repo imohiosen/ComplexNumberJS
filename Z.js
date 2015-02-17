@@ -36,7 +36,7 @@ function Z (a, b) {
             if (typeof a === "string") {
                 var args = a.match(/\s*\d+\s*\.?\d*/g);
                 if (args.length <= 2) {
-                    if (a.match(/j/gi) > 1)
+                    if (a.match(/j/gi).length > 1)
                         throw new Error("Unable to parse ComplexNumber: Why more that one 'j'?");
                     else{
                         if (!a.match(/j/gi) && args.length === 1){
