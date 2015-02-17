@@ -66,7 +66,7 @@ function Z (a, b) {
         ZInRectForm = true;
     };
     this.toString = function () {
-
+        return ZInRectForm? Re + " + j " +Im:  this.getAbs() + " < " + this.getArg();
     };
     this.valueOf = function () {
         return this.toString();
@@ -140,33 +140,33 @@ function Z (a, b) {
 
 };
 
-Z.prototype.sqrt = function (z) {
+Z.sqrt = function (z) {
     Z.pow(z, 0.5);
     return z;
 };
 
-Z.prototype.add = function (z1, z2) {
+Z.add = function (z1, z2) {
     var _Re = z1.getRe() + z2.getRe();
     var _Im = z1.getIm() + z2.getIm();
     return new Z(_Re, _Im);
 };
-Z.prototype.substract = function (z1, z2) {
+Z.substract = function (z1, z2) {
     var _Re = z1.getRe() - z2.getRe();
     var _Im = z1.getIm() - z2.getIm();
     return new Z(_Re, _Im);
 };
 
-Z.prototype.divide = function (z1,z2) {
+Z.divide = function (z1,z2) {
     var mod = z1.getAbs() / z2.getAbs();
     var arg = z1.getArg() - z2.getArg();
     return new Z(mod * Math.cos(arg), mod * Math.sin(arg));
 };
-Z.prototype.multiply = function (z1,z2) {
-    var mod = z1.getAbs() - z2.getAbs();
+Z.multiply = function (z1,z2) {
+    var mod = z1.getAbs() * z2.getAbs();
     var arg = z1.getArg() + z2.getArg();
     return new Z(mod * Math.cos(arg), mod * Math.sin(arg));
 };
-Z.prototype.pow = function(z, power) {
+Z.pow = function(z, power) {
     var mod = Math.pow(z.getAbs(), power);
     var arg = z.getArg() * power;
     return new Z(mod * Math.cos(arg), mod * Math.sin(arg));
