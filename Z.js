@@ -44,7 +44,7 @@ function Z (a, b) {
                             Im = 0;
                         } else if (a.match(/j/gi) && args.length === 1) {
                             Re = 0;
-                            Im = args[0]
+                            Im = parseFloat(args[0]);
                         } else if (Math.abs(a.search(args[0])- a.search("j")) > Math.abs(a.search(args[1])- a.search("j"))) {
                             Re = parseFloat(args[0]);
                             Im = parseFloat(args[1]);
@@ -224,3 +224,16 @@ Z.pow = function(z, power) {
     var arg = z.getArg() * power;
     return new Z(mod * Math.cos(arg), mod * Math.sin(arg));
 };
+Z.sum = function() {
+    var z = new Z(0,0);
+    for (prop in arguments)
+        if (arguments[prop] instanceof Array)
+            for (key in arguments[prop]){
+                z.addTo(new Z(arguments[prop][key]));
+                console.log("in");
+            }
+        else
+            z.addTo(new Z(arguments[prop]));
+    return z;
+};
+
