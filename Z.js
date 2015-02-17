@@ -28,19 +28,58 @@ function Z (a, b) {
     var ZInRectForm = true;
     var argInRad = true;
 
-    //INITIALIZATION PROCESSING
-    if (typeof a === "number" && typeof b === "number") {
-        Re = a;
-        Im = b;
-    } else if (typeof a === "string" && typeof b === "string") {
-        Re = parseFloat(a);
-        Im = parseFloat(b);
-    } else if (a instanceof Z) {
-        Re = a.getRe();
-        Im = a.getIm();
-        ZInRectForm = a.isInRectForm();
-        argInRad = a.isOpInRad();
-    }else{
+    if(!b){
+        if (typeof a === "string") {
+            var args = a.match(/\s*\d+\s*\.?\d*/g);
+            if (args.length <= 2) {
+                if (a.match(/j/gi) > 1)
+                    throw new Error("Unable to parse ComplexNumber: Why more that one 'j'?");
+                else{
+                    if (!a.match(/j/gi) && args.length === 1){
+                        Re = args[0];
+                        Im = 0;
+                    } else if (a.match(/j/gi) && args.length === 1) {
+                        Re = 0;
+                        Im = args[0]
+                    } else if (Math.abs(a.search(args[0])- a.search("j")) > Math.abs(a.search(args[1])- a.search("j"))) {
+                        Re = parseFloat(args[0]);
+                        Im = parseFloat(args[1]);
+                    } else {
+                        Re = parseFloat(args[1]);
+                        Im = parseFloat(args[0]);
+                    }
+                }
+
+
+
+            } else {
+                throw new Error("Unable to parse ComplexNumber: Too many Re and/or Im");
+            }
+        } else if (typeof a === "number") {
+            Re = a;
+            Im = 0;
+        } else if (a instanceof Z) {
+            Re = a.getRe();
+            Im = a.getIm();
+            ZInRectForm = a.isInRectForm();
+            argInRad = a.isOpInRad();
+        } else {
+            throw new Error("Unable to construct ComplexNumber object: Constructor takes either strings or number(see Documentation). \n--->created object in BAD state");
+        }
+    } else {
+        if (typeof a === "number" && typeof b === "number") {
+            Re = a;
+            Im = b;
+        } else if (typeof a === "string" && typeof b === "string") {
+            Re = parseFloat(a);
+            Im = parseFloat(b);
+        } else if (!a){
+            Re = 0;
+            Im = b;
+
+        } else {
+            throw new Error("Unable to construct ComplexNumber object: Constructor takes either strings or numbers (see Documentation) \nobject in BAD state");
+        }
     }
 
     this.isOpInRad = function () {
@@ -51,14 +90,6 @@ function Z (a, b) {
         return ZInRectForm;
     };
 
-    var processStr = function (a) {
-
-    };
-
-    var prcessStrNumArgMix;
-
-    //this.getPolar = function () {};
-    //this.getRect = function () {};
     this.doOpInPolForm = function () {
         ZInRectForm = false;
     };
