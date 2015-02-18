@@ -1,4 +1,3 @@
-""
 /**
  * Created by abraham on 2/17/15.
  */
@@ -16,7 +15,7 @@ Math.sqrt = function(parameter) {
 };
 
 
-function Z (a, b) {
+var Z = function (a, b) {
 
     /*
      This construction accepts Strings of the formats - "Mod < Arg", "Re + jIm",
@@ -237,3 +236,6 @@ Z.sum = function() {
     return z;
 };
 
+//console.log((new Z(3,4)).toString());
+
+if (!window) module.exports = Z;
