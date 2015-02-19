@@ -1,7 +1,6 @@
 # ComplexNumberJS
-javascript simple Complex Numbers helper class
 
-Z is a Javascript simple complex number helper class.
+Z is a Javascript simple complex number helper class. It works with node.js as well as with all browser with js implementation.
 
 Z Constructor
 -------------
@@ -26,21 +25,21 @@ General syntax
 
 2. Creating a a complex number in Rectangular form (3 - j4)-
 
-        var z = new Z(3,-4);/ with
+        var z = new Z(3,-4);// with numbers as parameters
 
     or
 
         var temp = new Z("3-j4");//with string
         var z = new Z(temp);// with an object of Z
 
-3. Ecapsulating a javascript primitive number or Number() objects with the Z constructor;
+3. Encapsulating a javascript primitive number or Number() objects with the Z constructor;
 
         var z = new Z(180);// variable "z" is now 180 + j0 not 180 < 0
 
 4. Creating a Z object as a sum of constructor-
 
         var z_par = new Z("j(-3)", "j3");// "z_par" equals 0 + j 0
-        // falsy arguments values resolves to zero but logs warning.
+        //falsy arguments values resolves to zero but logs warning.
         var z = new Z(undefined, 2, "-3.5j", "-2", z_par, null, "0+j3.5");//"z" equals 0 + j 0
 
 5. Creating a Z object from an argument list containing polar form string of a complex number. Note that the argument must always be in degree (it just makes things easier for both of us)
@@ -48,6 +47,13 @@ General syntax
         var z_par = new Z("1<180");// "z_par" equals 1 + j 0
         var z = new Z(null, "2",2, "-3.5j", "-2", z_par, "  0   +  j3.5", "1<180", );//"z" equals 0 + j 0, also notice the redundant whitespaces- the constructor still understands what you want
 
-For string paramenters, the spaces can also be ommited
+6. Performing addition operations in strings. Note that you can only do this in rectangular form-
+
+        var z_par = new Z("    -j1 + 2 + j4 -2 +(-0 + j(-3))");// "z_par" equals 0 + j 0
+        var z = new Z("    -j1 + 2 + j4 -2 +(-0 + j(-3))", "2",2, "-3.5j", "-2", z_par, "  0   +  j3.5", "1<180", );//"z" equals 0 + j 0, and yes! you can send in any number of arguments
+
+-Note For this version don't do any sort of multiplication in the constructor string parameter. This functionality may be handled in future versions
+
+For string parameters, the spaces can also be ommited
 
 You can also use this library with node.js projects.
