@@ -66,8 +66,8 @@ General syntax
 Math Class Extension
 --------------------
 
-    After this library is loaded your Math class definition would have experienced a little update. Don't worry, every behaviour remains unaltered even the behaviour of Math.sqrt(positiveRealNumber), i.e. it returns a real number and not one encapsulated in a Z object
-    You will now be able to find the square root of what I like to call the ancestor of all complex numbers, -1, as well as its decendants, objects of Z;
+After this library is loaded your Math class definition would have experienced a little update. Don't worry, every behaviour remains unaltered even the behaviour of Math.sqrt(positiveRealNumber), i.e. it returns a real number and not one encapsulated in a Z object
+You will now be able to find the square root of what I like to call the ancestor of all complex numbers, -1, as well as its decendants, objects of Z;
 
         var z = Math.sqrt(-1);
 
@@ -82,8 +82,31 @@ Math Class Extension
             console.log("Yippee! still returned a complex number object. see " + z.toString());
         else
             console.log("This will never print. Ah aha ...");
-            //If I was so sure, why type it? Remember in programming you ca never be absolutely sure
+            //If I was so sure, why type it? Remember when programming you ca never be absolutely sure
+
+        z = Math.sqrt(4);//"z" is now 2
+
+        if (z instanceof Z)
+            console.log("Aww! Somethings wrong, expected a primitive number and not a Z instance");
+        else
+            console.log("I told you not worry, I've got you covered.");
 
 
+Error Handling
+--------------
+
+Hmm, I can hear Z.js screaming "Test me, make me fail. I wanted my developer(s) to make me better".
+
+Z non-static methods
+-------------------
+Every method you would logically expect to return nothing returns "this" (this currently referenced object).
+The parameter arg could any thing that would pass as Z's constructor acceptable arguments- ie Z objects, String, and regular number (javascript primitive number or Number() objects)
+
+        console.log(new Z());// to see a list of Z's non-static methods
+
+Z static methods
+---------------
+The parameter arg could any thing that would pass as Z's constructor acceptable arguments- ie Z objects, String, and regular number (javascript primitive number or Number() objects)
+        console.log(Z);// to see a list of Z's static methods
 
 
