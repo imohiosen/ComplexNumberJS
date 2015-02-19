@@ -27,14 +27,33 @@ var Z = function (a, b) {
 
 
     var processPar = function(_arguments){
-        if(!b){
+        if(_arguments.length === 1){
             if (typeof a === "string") {
-                var args = a.replace(/\s+|\(|\)/g,"").match(/j?-?j?\d+\.?\d*j?/gi);
-                for (var i = 0; i < args.length; i++) {
-                    if ( args [i].search("j")>-1) {
-                        Im += parseFloat(args[i].replace("j", ""));
-                    } else {
-                        Re += parseFloat(args[i])
+                if(a.search(/j/gi)>-1 && a.search(/</gi)>-1)
+                    throw new Error("Unable to construct ComplexNumber object: Constructor cannot takes rectangular Z and polar Z in a single string(see Documentation). \n--->created object in BAD state");
+                if(a.search(/</gi)>-1){
+                    var args = a.replace(/\s+|\(|\)/g,"").match(/-?\d+\.?\d*/gi);
+                    if (args.length > 2  || a.search(args[0]) > a.search("<")  || a.search(args[1]) < a.search("<"))
+                        throw new Error("Unable to construct ComplexNumber object: Be careful specifying polar Z with String. \n--->created object in BAD state");
+                    if (args.length <= 1 && a.search("<")>-1)
+                        throw new Error("Unable to construct ComplexNumber object: Be careful specifying polar Z with String. \n--->created object in BAD state");
+                    if (a.search("<")>-1)
+                        if (a.match(/</gi).length > 1)
+                            throw new Error("Unable to construct ComplexNumber object: Be careful specifying polar Z with String. \n--->created object in BAD state");
+                    //arg must be  in degrees
+                    Re = parseFloat(args[0]) * Math.cos(parseFloat(args[1]) / 180 * Math.PI);
+                    Im = parseFloat(args[0]) * Math.sin(parseFloat(args[1]) / 180 * Math.PI);
+                    argInRad = false;
+                    ZInRectForm = false;
+
+                } else {
+                    var args = a.replace(/\s+|\(|\)/g,"").match(/j?-?j?\d+\.?\d*j?/gi);
+                    for (var i = 0; i < args.length; i++) {
+                        if ( args [i].search("j")>-1) {
+                            Im += parseFloat(args[i].replace("j", ""));
+                        } else {
+                            Re += parseFloat(args[i])
+                        }
                     }
                 }
           } else if (typeof a === "number") {
@@ -50,15 +69,10 @@ var Z = function (a, b) {
             }
         } else {
             var temp = new Z(0);
-            console.log(_arguments);
 
             for (var prop in _arguments){
-                console.log(typeof temp);
-                if (_arguments[prop]){
+                if (_arguments[prop])
                     temp.addTo(new Z(_arguments[prop]));
-                    console.log(_arguments[prop]);
-
-                }
                 else
                     console.log("Warning! One of you constuctor arguments is falsy");
             }
