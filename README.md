@@ -107,6 +107,7 @@ The parameter arg could any thing that would pass as Z's constructor acceptable 
 Z static methods
 ---------------
 The parameter arg could any thing that would pass as Z's constructor acceptable arguments- ie Z objects, String, and regular number (javascript primitive number or Number() objects)
+
         console.log(Z);// to see a list of Z's static methods
 
 
@@ -115,8 +116,8 @@ A word (mostly likely more) of caution
 
 Please do endeavour to always use
 
-    z.isInRectForm();
-    z.isOpInRad();
+        z.isInRectForm();
+        z.isOpInRad();
 
 to ensure you'd be processing Z instances in a states you'd be aware of. You don't want to be working in degrees and get angles in radians. Believe me, ive been there.
 
