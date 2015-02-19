@@ -100,7 +100,7 @@ Hmm, I can hear Z.js screaming "Test me, make me fail. I wanted my developer(s) 
 Z non-static methods
 -------------------
 Every method you would logically expect to return nothing returns "this" (this currently referenced object).
-The parameter arg could any thing that would pass as Z's constructor acceptable arguments- ie Z objects, String, and regular number (javascript primitive number or Number() objects)
+The parameter ARG could any thing that would pass as Z's constructor acceptable arguments- ie Z objects, String, and regular number (javascript primitive number or Number() objects)
 
         console.log(new Z());// to see a list of Z's non-static methods
 
@@ -119,9 +119,9 @@ The parameter arg could any thing that would pass as Z's constructor acceptable 
 | getArg | number | - |
 | getRe | number | - |
 | getIm | number | - |
-| multiplyBy | Z | Z |
-| divideBy | Z | Z |
-| addTo | Z | Z |
+| multiplyBy | Z | ARG |
+| divideBy | Z | ARG |
+| addTo | Z | ARG |
 | doPow | Z | number |
 | doSqrt | Z | number |
 
@@ -129,10 +129,31 @@ All of the above stated Z method returning objects of type Z actually returns "t
 
 Z static methods
 ---------------
-The parameter arg could any thing that would pass as Z's constructor acceptable arguments- ie Z objects, String, and regular number (javascript primitive number or Number() objects)
+The parameter ARG could any thing that would pass as Z's constructor acceptable arguments- ie Z objects, String, and regular number (javascript primitive number or Number() objects)
 
         console.log(Z);// to see a list of Z's static methods
 
+| Name | Return type | Parameter list |
+|------|-------------|----------------|
+| multiply | Z | ARG, ARG |
+| divide | Z | ARG, ARG |
+| add | Z | ARG, ARG |
+| substract | Z | ARG, ARG |
+| formatArg | number | number |
+| sum | Z | ARG[, ARG[, ARG ...]] |
+| doPow | Z | ARG, number |
+| doSqrt | Z | ARG |
+
+We care for masochist too
+-------------------------
+We provided all y'all with a variable that you could also use instead of Z.
+
+Say hello to "ComplexNumber()"
+
+        var z = new ComplexNumber("Hello");// that's not what I mean
+        var z = new ComplexNumber();// "z" equals 0+j0
+
+The other usages of Z also follows. A small caveat is in order- "ComplexNumber()" can't be used with node.js
 
 A word (mostly likely more) of caution
 --------------------------------------
@@ -144,7 +165,6 @@ Please do endeavour to always use
         z.isOpInRad();
 
  to ensure you'd be processing Z instances instates you'd be aware of. You don't want to be working in degrees and get angles in radians. Believe me, i've been there..g,
-
 
 
 Now, go forth and enjoy these bytes of awesomeness!
