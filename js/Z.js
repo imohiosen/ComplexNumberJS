@@ -44,7 +44,7 @@ var Z = function (a, b) {
                     Re = parseFloat(args[0]) * Math.cos(parseFloat(args[1]) / 180 * Math.PI);
                     Im = parseFloat(args[0]) * Math.sin(parseFloat(args[1]) / 180 * Math.PI);
                     argInRad = false;
--                    ZInRectForm = false;
+                    ZInRectForm = false;
 
                 } else {
                     var args = a.replace(/\s+|\(|\)/g,"").match(/j?-?j?\d+\.?\d*j?/gi);
