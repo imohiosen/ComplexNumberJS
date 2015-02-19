@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6c59114d-ffff-4e39-947a-b74edbaae4a0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Z.js" afterPath="$PROJECT_DIR$/Z.js" />
     </list>
     <ignored path="ComplexNumberJS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,7 +46,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="2" selection-start="123" selection-end="123" vertical-scroll-proportion="0.048295453" vertical-offset="68" max-vertical-offset="442">
+            <state line="34" column="0" selection-start="1475" selection-end="1475" vertical-scroll-proportion="0.8068182" vertical-offset="294" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -213,7 +212,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="2" selection-start="123" selection-end="123" vertical-scroll-proportion="0.048295453" vertical-offset="68" max-vertical-offset="442">
+        <state line="34" column="0" selection-start="1475" selection-end="1475" vertical-scroll-proportion="0.8068182" vertical-offset="294" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
