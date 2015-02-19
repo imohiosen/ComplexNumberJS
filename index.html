@@ -4,10 +4,17 @@
     <title>ComplexNumber JS Test Page</title>
     <script type="text/javascript" src="js/Z.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
 </head>
 <body>
 
 <div id="demo">
+    <div class="row">
+        <div class="col-xs-6">.col-xs-9</div>
+        <div class="col-xs-6">.col-xs-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
+        <div class="col-xs-12">.col-xs-6<br>Subsequent columns continue along the new line.</div>
+    </div>
     <div>
         <input id="code" type="text">
     </div>
@@ -15,7 +22,9 @@
 </div>
 <script type="text/javascript" >
     $(document).ready(function(){
-        $("div").load("js/demo.json");
+        $(".col-xs-6").load("js/demo.json");
+
+
     });
 </script>
 
