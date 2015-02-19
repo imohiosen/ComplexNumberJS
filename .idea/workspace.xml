@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c59114d-ffff-4e39-947a-b74edbaae4a0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ComplexNumberJS.iws" />
@@ -55,7 +56,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="32" selection-start="320" selection-end="320" vertical-scroll-proportion="0.39273927" vertical-offset="0" max-vertical-offset="1768">
+            <state line="91" column="0" selection-start="3524" selection-end="3524" vertical-scroll-proportion="0.33050847" vertical-offset="1469" max-vertical-offset="1751">
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -324,7 +325,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="32" selection-start="320" selection-end="320" vertical-scroll-proportion="0.39273927" vertical-offset="0" max-vertical-offset="1768">
+        <state line="91" column="0" selection-start="3524" selection-end="3524" vertical-scroll-proportion="0.33050847" vertical-offset="1469" max-vertical-offset="1751">
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
