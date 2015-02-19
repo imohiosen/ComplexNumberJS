@@ -144,6 +144,23 @@ The parameter ARG could any thing that would pass as Z's constructor acceptable 
 | doPow | Z | ARG, number |
 | doSqrt | Z | ARG |
 
+
+Doing Difference
+----------------
+To perform the difference operation, simply negate z2 and addTo to z1
+
+        var z1 = new Z("2+3j");
+        var z2 = new Z(-2, "-3j");
+        console.log(z1.addTo(z2.negate()).toString());
+        //Now z1 equals 0+j0
+        //and z1 equals 2+j3
+
+or just use
+
+        var z = Z.substract("2+3j", new Z(-2,-3));
+        //Now z equals 0+j0
+
+
 We care for masochist too
 -------------------------
 We provided all y'all with a variable that you could also use instead of Z.
