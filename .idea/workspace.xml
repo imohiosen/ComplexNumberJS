@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c59114d-ffff-4e39-947a-b74edbaae4a0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/demo.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -55,19 +53,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="16" selection-start="410" selection-end="410" vertical-scroll-proportion="-9.269231" vertical-offset="48" max-vertical-offset="493">
+            <state line="17" column="35" selection-start="429" selection-end="429" vertical-scroll-proportion="0.73926383" vertical-offset="48" max-vertical-offset="493">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="demo.json" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="demo.json" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/demo.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="13" selection-start="519" selection-end="519" vertical-scroll-proportion="0.5214724" vertical-offset="0" max-vertical-offset="3451">
+            <state line="15" column="17" selection-start="631" selection-end="631" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="3451">
               <folding />
             </state>
           </provider>
@@ -102,9 +100,9 @@
       <list>
         <option value="$PROJECT_DIR$/Z.js" />
         <option value="$PROJECT_DIR$/js/Z.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/js/demo.json" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -290,13 +288,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="410" selection-end="410" vertical-scroll-proportion="-9.269231" vertical-offset="48" max-vertical-offset="493">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state line="186" column="51" selection-start="7066" selection-end="7117" vertical-scroll-proportion="0.0" vertical-offset="2929" max-vertical-offset="3281">
@@ -306,7 +297,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/demo.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="519" selection-end="519" vertical-scroll-proportion="0.5214724" vertical-offset="0" max-vertical-offset="3451">
+        <state line="15" column="17" selection-start="631" selection-end="631" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="3451">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="35" selection-start="429" selection-end="429" vertical-scroll-proportion="0.73926383" vertical-offset="48" max-vertical-offset="493">
           <folding />
         </state>
       </provider>
