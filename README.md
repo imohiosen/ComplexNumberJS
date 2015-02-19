@@ -1,6 +1,6 @@
 # ComplexNumberJS
 
-Z is a Javascript simple complex number helper class. It works with node.js as well as with all browser with js implementation.
+Z is a Javascript simple complex number helper class. It works with node.js as well as on all browser with js implementation.
 
 Z Constructor
 -------------
@@ -104,6 +104,29 @@ The parameter arg could any thing that would pass as Z's constructor acceptable 
 
         console.log(new Z());// to see a list of Z's non-static methods
 
+| Name | Return type | Parameter list |
+|------|-------------|----------------|
+| isOpInRad | boolean | - |
+| isInRectForm | boolean | - |
+| doOpInPolForm | Z | - |
+| doOpInRectForm | Z | - |
+| doRepInRad | Z | - |
+| toString | string | - |
+| negate | Z | - |
+| doInverse | Z | - |
+| getAbs | number | - |
+| getMod | number | - |
+| getArg | number | - |
+| getRe | number | - |
+| getIm | number | - |
+| multiplyBy | Z | Z |
+| divideBy | Z | Z |
+| addTo | Z | Z |
+| doPow | Z | number |
+| doSqrt | Z | number |
+
+All of the above stated Z method returning objects of type Z actually returns "this".
+
 Z static methods
 ---------------
 The parameter arg could any thing that would pass as Z's constructor acceptable arguments- ie Z objects, String, and regular number (javascript primitive number or Number() objects)
@@ -116,10 +139,12 @@ A word (mostly likely more) of caution
 
 Please do endeavour to always use
 
+        //assuming z is a Z instance
         z.isInRectForm();
         z.isOpInRad();
 
-to ensure you'd be processing Z instances in a states you'd be aware of. You don't want to be working in degrees and get angles in radians. Believe me, ive been there.
+ to ensure you'd be processing Z instances instates you'd be aware of. You don't want to be working in degrees and get angles in radians. Believe me, i've been there..g,
+
 
 
 Now, go forth and enjoy these bytes of awesomeness!
