@@ -26,61 +26,18 @@ var Z = function (a, b) {
     var argInRad = true;
 
 
-    var processPar = function(){
+    var processPar = function(_arguments){
         if(!b){
             if (typeof a === "string") {
-                var args = a.match(/\s*-?\d+\s*\.?\d*/g);
-                if(a.match(/-? \d+/g))
-                    throw new Error("Unable to parse ComplexNumber: Remove whitespace character from between sign and number?");
-                if (args.length <= 2) {
-                    var temp1, temp2;
-                    try{
-                        temp1 = a.match(/j/gi).length !== 1;
-                    }catch (e){
-                        if (e instanceof TypeError ) temp1 = false;
-                        else throw e;
-                    }
-                    try{
-                        temp2 = a.match(/</gi).length !== 1;
-                    }catch (e){
-                        if (e instanceof TypeError ) temp2 = false;
-                        else throw e;
-                    }
-                    if ((temp1||temp2))
-                        throw new Error(
-                            "Unable to parse ComplexNumber: Why more that one 'j'?\n" +
-                            "For addition of Z objects use this syntax :\n" +
-                            "Z.add(new Z('j Im'), new Z(0,Im)) or\n" +
-                            "Z.sum(new Z(null,Im) , [new Z(0,Im)], ['4j', new Z(3)], Math.sqrt(-1))\n"
-
-                        );
-
-                    else if (!a.match(/j/gi) && args.length === 1) {
-                        Re = parseFloat(args[0]);
-                        Im = 0;
-                    } else if ((!a.match(/j/gi) && !a.match(/</gi)) && args.length >= 1) {
-                        throw new Error("Unable to parse ComplexNumber: Please don't be malicious or use the built-in functionality for simple operations");
-
-                    } else if (a.match(/j/gi) && args.length === 1) {
-                        Re = 0;
-                        Im = parseFloat(args[0]);
-                    } else if (a.match(/</gi) && args.length === 2) {
-                        //arg must be  in degrees
-                        Re = parseFloat(args[0]) * Math.cos(parseFloat(args[1]) / 180 * Math.PI);
-                        Im = parseFloat(args[0]) * Math.sin(parseFloat(args[1]) / 180 * Math.PI);
-                        argInRad = false;
-                        ZInRectForm = false;
-                    } else if (Math.abs(a.search(args[0]) - a.search("j")) > Math.abs(a.search(args[1]) - a.search("j"))) {
-                        Re = parseFloat(args[0]);
-                        Im = parseFloat(args[1]);
+                var args = a.replace(/\s+|\(|\)/g,"").match(/j?-?j?\d+\.?\d*j?/gi);
+                for (var i = 0; i < args.length; i++) {
+                    if ( args [i].search("j")>-1) {
+                        Im += parseFloat(args[i].replace("j", ""));
                     } else {
-                        Re = parseFloat(args[1]);
-                        Im = parseFloat(args[0]);
+                        Re += parseFloat(args[i])
                     }
-                } else {
-                    throw new Error("Unable to parse ComplexNumber: Too many Re and/or Im");
                 }
-            } else if (typeof a === "number") {
+          } else if (typeof a === "number") {
                 Re = a;
                 Im = 0;
             } else if (a instanceof Z) {
@@ -92,24 +49,27 @@ var Z = function (a, b) {
                 throw new Error("Unable to construct ComplexNumber object: Constructor takes either strings or number(see Documentation). \n--->created object in BAD state");
             }
         } else {
-            if (typeof a === "number" && typeof b === "number") {
-                Re = a;
-                Im = b;
-            } else if (typeof a === "string" && typeof b === "string") {
-                Re = parseFloat(a);
-                Im = parseFloat(b);
-            } else if (!a){
-                Re = 0;
-                Im = b;
+            var temp = new Z(0);
+            console.log(_arguments);
 
-            } else {
-                throw new Error("Unable to construct ComplexNumber object: Constructor takes either strings or numbers (see Documentation) \nobject in BAD state");
+            for (var prop in _arguments){
+                console.log(typeof temp);
+                if (_arguments[prop]){
+                    temp.addTo(new Z(_arguments[prop]));
+                    console.log(_arguments[prop]);
+
+                }
+                else
+                    console.log("Warning! One of you constuctor arguments is falsy");
             }
+            console.log(typeof temp);
+            Re = temp.getRe();
+            Im = temp.getIm();
         }
         //INITIALIZATION PROCESSING
     };
 
-    processPar();
+    processPar(arguments);
 
     this.isOpInRad = function () {
         return argInRad;
