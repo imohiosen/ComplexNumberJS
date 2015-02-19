@@ -11,8 +11,11 @@ Constructor Usage Examples.
 General syntax- var z = new Z(argument[, argument[, argument][, argument], ... ])
 
 1. Creating a "zero" complex number (0+j0)-
+
         var zeroZ = new Z();
+
     or
+
         var zeroZ = new Z(0);
 
 2. Creating a a complex number in Rectangular form (3 - j4)-
