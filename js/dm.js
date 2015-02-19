@@ -1,4 +1,4 @@
-{
+var presentation = {
     "name": "ComplexNumberJS",
     "startNote": "Z is a Javascript simple complex number helper class. It works with node.js as well as on all browser with js implementation.",
     "demo": [
@@ -195,4 +195,4 @@
         }
     ],
     "endNote": "Now, go forth and enjoy these bytes of awesomeness!"
-}
+};
