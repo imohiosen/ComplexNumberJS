@@ -11,9 +11,35 @@
 
 <div id="demo">
     <div class="row">
-        <div class="col-xs-6">.col-xs-9</div>
-        <div class="col-xs-6">.col-xs-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div gets wrapped onto a new line as one contiguous unit.</div>
-        <div class="col-xs-12">.col-xs-6<br>Subsequent columns continue along the new line.</div>
+        <div class="col-xs-6" id="slide">
+            <h1 class="col-xs-12">CODE</h1>
+            <div class="col-xs-12">
+                <p>
+                    Paragraph
+                </p>
+                <button>
+                    Button
+                </button>
+            </div>
+        </div>
+        <div class="col-xs-6" id="editor">
+            <h1 class="col-xs-12">CODE</h1>
+            <div class="col-xs-12">
+                <input type="text" value="code">
+                <button>
+                    Run
+                </button>
+                <button>
+                    Next
+                </button>
+            </div>
+        </div>
+        <div class="col-xs-12" id="console">
+            <h1>CONSOLE OUTPUT</h1>
+            <code>
+                Error!!!!!
+            </code>
+        </div>
     </div>
     <div>
         <input id="code" type="text">
@@ -22,8 +48,6 @@
 </div>
 <script type="text/javascript" >
     $(document).ready(function(){
-        $(".col-xs-6").load("js/demo.json");
-
 
     });
 </script>
