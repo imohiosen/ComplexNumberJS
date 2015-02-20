@@ -76,7 +76,6 @@ var Z = function (a, b) {
                 else
                     console.log("Warning! One of you constuctor arguments is falsy");
             }
-            console.log(typeof temp);
             Re = temp.getRe();
             Im = temp.getIm();
         }
@@ -223,7 +222,6 @@ Z.sum = function() {
         if (arguments[prop] instanceof Array)
             for (key in arguments[prop]){
                 z.addTo(new Z(arguments[prop][key]));
-                console.log("in");
             }
         else
             z.addTo(new Z(arguments[prop]));

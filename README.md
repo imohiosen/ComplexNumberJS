@@ -161,7 +161,7 @@ or just use
         //Now z equals 0+j0
 
 
-We care for masochist too
+We care for masochists too
 -------------------------
 We provided all y'all with a variable that you could also use instead of Z.
 
