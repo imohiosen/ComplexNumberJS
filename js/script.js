@@ -2,19 +2,6 @@
  * Created by Abraham on 2/19/15.
  */
 
-var client = new ZeroClipboard( document.getElementById("copy-button"), {
-    moviePath: "ZeroClipboard.swf"
-} );
-
-client.on( "load", function(client) {
-    // alert( "movie is loaded" );
-
-    client.on( "complete", function(client, args) {
-        // `this` is the element that was clicked
-        this.style.display = "none";
-        alert("Copied text to clipboard: " + args.text );
-    } );
-} );
 var i = 0;
 var j = 0;
 var k = 0;
