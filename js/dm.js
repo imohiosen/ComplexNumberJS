@@ -30,7 +30,6 @@ var presentation = {
                 {
                     "descr": "2. Creating a a complex number in Rectangular form (3 - j4)",
                     "code": [
-                        "var z = new Z(3,-4);// with numbers as parameters",
                         "var temp = new Z('3-j4');//with string",
                         "var z = new Z(temp);// with an object of Z"
                     ]
@@ -58,7 +57,7 @@ var presentation = {
                     "descr": "6. Performing addition operations in strings. Note that you can only do this in rectangular form",
                     "code": [
                         "var z_par = new Z('    -j1 + 2 + j4 -2 +(-0 + j(-3))');// 'z_par' equals 0 + j 0",
-                        "var z = new Z('    -j1 + 2 + j4 -2 +(-0 + j(-3))', '2',2, '-3.5j', '-2', z_par, '  0   +  j3.5', '1<180', );//'z' equals 0 + j 0, and yes! you can send in any number of arguments",
+                        "var z = new Z('    -j1 + 1 + j4 -2 +(-0 + j(-3))', '2',2, '-3.5j', '-2', z_par, '  0   +  j3.5', '1<180', );//'z' equals 0 + j 0, and yes! you can send in any number of arguments",
                         "//NOTE!!! in polar form this functionality fails, try it out so you can recognize the error",
                         "var z_par1 = new Z('1<180 180< 0');     // Really! what are you trying to do?",
                         "var z_par2 = new Z('1<  180 <');        //We only did our best to process what we discussed so far",
@@ -85,15 +84,12 @@ var presentation = {
             "body": [
                 {
                     "descr": "After this library is loaded your Math class definition would have experienced a little update. Don't worry, every behaviour remains unaltered even the behaviour of Math.sqrt(positiveRealNumber), i.e. it returns a real number and not one encapsulated in a Z object You will now be able to find the square root of what I like to call the ancestor of all complex numbers, -1, as well as its decendants, objects of Z;",
-
                     "code": [
                         "var z = Math.sqrt(-1);\nif (z instanceof Z)\n\tconsole.log('Yaay! it returned a complex number object. see ' + z.toString());\nelse\n\tconsole.log('This will never print. Ah aha ...');\n",
                         "z = Math.sqrt(z);\nif (z instanceof Z)\n\tconsole.log('Yippee! still returned a complex number object. see ' + z.toString());\nelse\n\tconsole.log('This will never print. Ah aha ...');\n\t//If I was so sure, why type it? Remember when programming you ca never be absolutely sure",
                         "z = Math.sqrt(4);//'z' is now 2\nif (z instanceof Z)\n\tconsole.log('Aww! Somethings wrong, expected a primitive number and not a Z instance');\nelse\n\tconsole.log('I told you not worry, I've got you covered.');"
                     ]
                 }
-
-
 
 
             ]

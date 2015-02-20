@@ -25,10 +25,6 @@ General syntax
 
 2. Creating a a complex number in Rectangular form (3 - j4)-
 
-        var z = new Z(3,-4);// with numbers as parameters
-
-    or
-
         var temp = new Z("3-j4");//with string
         var z = new Z(temp);// with an object of Z
 
@@ -50,7 +46,7 @@ General syntax
 6. Performing addition operations in strings. Note that you can only do this in rectangular form-
 
         var z_par = new Z("    -j1 + 2 + j4 -2 +(-0 + j(-3))");// "z_par" equals 0 + j 0
-        var z = new Z("    -j1 + 2 + j4 -2 +(-0 + j(-3))", "2",2, "-3.5j", "-2", z_par, "  0   +  j3.5", "1<180", );//"z" equals 0 + j 0, and yes! you can send in any number of arguments
+        var z = new Z("    -j1 + 1 + j4 -2 +(-0 + j(-3))", "2",2, "-3.5j", "-2", z_par, "  0   +  j3.5", "1<180", );//"z" equals 0 + j 0, and yes! you can send in any number of arguments
         //NOTE!!! in polar form this functionality fails, try it out so you can recognize the error
         var z_par1 = new Z("1<180 180< 0");     // Really! what are you trying to do?
         var z_par2 = new Z("1<  180 <");        //We only did our best to process what we discussed so far
