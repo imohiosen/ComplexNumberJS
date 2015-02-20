@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6c59114d-ffff-4e39-947a-b74edbaae4a0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/script.js" afterPath="$PROJECT_DIR$/js/script.js" />
     </list>
     <ignored path="ComplexNumberJS.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -56,7 +55,7 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="99" selection-start="2440" selection-end="2440" vertical-scroll-proportion="0.6677632" vertical-offset="664" max-vertical-offset="1394">
+            <state line="68" column="0" selection-start="3002" selection-end="3002" vertical-scroll-proportion="0.27302632" vertical-offset="1073" max-vertical-offset="1377">
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -405,7 +404,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="99" selection-start="2440" selection-end="2440" vertical-scroll-proportion="0.6677632" vertical-offset="664" max-vertical-offset="1394">
+        <state line="68" column="0" selection-start="3002" selection-end="3002" vertical-scroll-proportion="0.27302632" vertical-offset="1073" max-vertical-offset="1377">
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
